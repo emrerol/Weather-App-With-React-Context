@@ -1,17 +1,24 @@
 import "../styles/weathercard.styles.css";
 
-const WeatherCard = ({ weathers }) => {
+const WeatherCard = ({ date, degree, icon, status }) => {
   return (
     <div className="card">
       <div>
-        <img
-          className="rotate"
-          src="https://img.icons8.com/doodle/48/undefined/sun--v1.png"
-        />
+        <img className="rotate" src={icon} />
       </div>
+
       <div className="data-container">
-        <p className="data">Date</p>
-        <p className="data">Degree</p>
+        <div className="info-holder">
+          <p className="data">{status}</p>
+        </div>
+        <div className="info-holder">
+          <label>Date: </label>
+          <p className="data">{date}</p>
+        </div>
+        <div className="info-holder">
+          <label>Degree:</label>
+          <p className="data">{degree}</p>
+        </div>
       </div>
     </div>
   );
