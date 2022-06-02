@@ -3,11 +3,10 @@ import "../styles/weathercard.styles.css";
 const WeatherCard = ({ date, degree, icon, status }) => {
   return (
     <div className="card">
-      <div>
-        <img className="rotate" src={icon} />
-      </div>
-
       <div className="data-container">
+        <div className="info-holder">
+          <img className="rotate" src={icon} />
+        </div>
         <div className="info-holder">
           <p className="data">{status}</p>
         </div>
@@ -17,7 +16,7 @@ const WeatherCard = ({ date, degree, icon, status }) => {
         </div>
         <div className="info-holder">
           <label>Degree:</label>
-          <p className="data">{degree}</p>
+          <p className="data">{degree} °C</p>
         </div>
       </div>
     </div>

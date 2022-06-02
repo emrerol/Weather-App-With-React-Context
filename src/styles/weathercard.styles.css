@@ -27,21 +27,18 @@ p:first-child{
       flex-direction: column;
 }
 
-
-
 .rotate {
-      position: absolute;
-      animation: rotation 8s infinite ease;
-      top: 5%;
-      left: 35%;
+      animation-name: rotation;
+      animation-timing-function: ease;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
 }
-
 
 .data-container {
       position:absolute;
       display: flex;
       flex-direction: column;
-      margin-top: 100px;
+      top: 5%;
 }
 
 .info-holder {
